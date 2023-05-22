@@ -1,0 +1,96 @@
+@charset "UTF-8"
+
+/* 共通部分------*/
+
+html {
+    font-size: 100%;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.7;
+  background-color: #050406;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+.openbtn1{
+  position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+  background:#57a2c7;
+  cursor: pointer;
+    width: 50px;
+    height:50px;
+  border-radius: 5px;
+}
+
+/*ボタン内側*/
+.openbtn1 span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+  background: #fff;
+    width: 45%;
+  }
+
+.openbtn1 span:nth-of-type(1) {
+  top:15px; 
+}
+
+.openbtn1 span:nth-of-type(2) {
+  top:23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+  top:31px;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+  opacity: 0;/*真ん中の線は透過*/
+}
+
+.openbtn1.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+  background:#f3f3f3;
+    padding:20px;
+}
+
+
+a{
+  color: #333;
+  text-decoration: none;
+}
+
+.lead{
+  margin:20px 0 0 0;
+}
+
+.btn-block{
+  width:200px;  
+  padding: 30px;
+}

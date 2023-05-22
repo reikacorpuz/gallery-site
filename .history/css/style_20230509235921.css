@@ -1,0 +1,95 @@
+@charset "UTF-8"
+
+/* 共通部分------*/
+
+html {
+    font-size: 100%;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.7;
+  background-color: #050406;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*ハンバーガーメニュー*/
+.hamburger-menu{
+  position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+  cursor: pointer;
+    width: 60px;
+    height: 60px;
+  border-radius: 5px;
+}
+
+/*ボタン内側*/
+.hamburger-menu span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+  background: #fff;
+    width: 45%;
+  }
+
+.hamburger-menu span:nth-of-type(1) {
+  top:15px; 
+}
+
+.hamburger-menu span:nth-of-type(2) {
+  top:23px;
+}
+
+.hamburger-menu span:nth-of-type(3) {
+  top:31px;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.hamburger-menu.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 40%;
+}
+
+.hamburger-menu.active span:nth-of-type(2) {
+  opacity: 0;/*真ん中の線は透過*/
+}
+
+.hamburger-menu.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 40%;
+}
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+    padding:20px;
+}
+
+
+a{
+  color: #333;
+  text-decoration: none;
+}
+
+.lead{
+  margin:20px 0 0 0;
+}
+
+.btn-block{
+  width:200px;  
+  padding: 30px;
+}
+//*ハンバーガーメニュー*/

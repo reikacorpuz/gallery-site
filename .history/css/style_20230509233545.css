@@ -1,0 +1,26 @@
+@charset "UTF-8"
+
+/* 共通部分------*/
+
+html {
+    font-size: 100%;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.7;
+  background-color: #050406;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+.hamburger {
+  color: ;
+}
